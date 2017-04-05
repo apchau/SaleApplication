@@ -30,11 +30,11 @@ Partial Class frmMain
         Me.btnExit = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblCustomer = New System.Windows.Forms.Label()
+        Me.lblEmployee = New System.Windows.Forms.Label()
+        Me.lblInventory = New System.Windows.Forms.Label()
+        Me.lblLogout = New System.Windows.Forms.Label()
+        Me.lblExit = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -132,56 +132,61 @@ Partial Class frmMain
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(0, 17)
         '
-        'Label1
+        'lblCustomer
         '
-        Me.Label1.Location = New System.Drawing.Point(24, 151)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 23)
-        Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Label1"
+        Me.lblCustomer.Location = New System.Drawing.Point(145, 151)
+        Me.lblCustomer.Name = "lblCustomer"
+        Me.lblCustomer.Size = New System.Drawing.Size(83, 23)
+        Me.lblCustomer.TabIndex = 16
+        Me.lblCustomer.Text = "Customer"
+        Me.lblCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'lblEmployee
         '
-        Me.Label2.Location = New System.Drawing.Point(142, 151)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 23)
-        Me.Label2.TabIndex = 17
-        Me.Label2.Text = "Label2"
+        Me.lblEmployee.Location = New System.Drawing.Point(24, 151)
+        Me.lblEmployee.Name = "lblEmployee"
+        Me.lblEmployee.Size = New System.Drawing.Size(83, 23)
+        Me.lblEmployee.TabIndex = 17
+        Me.lblEmployee.Text = "Employee"
+        Me.lblEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label3
+        'lblInventory
         '
-        Me.Label3.Location = New System.Drawing.Point(266, 151)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 23)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Label3"
+        Me.lblInventory.Location = New System.Drawing.Point(266, 151)
+        Me.lblInventory.Name = "lblInventory"
+        Me.lblInventory.Size = New System.Drawing.Size(83, 23)
+        Me.lblInventory.TabIndex = 18
+        Me.lblInventory.Text = "Inventory"
+        Me.lblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
+        'lblLogout
         '
-        Me.Label4.Location = New System.Drawing.Point(388, 151)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(83, 23)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Label4"
+        Me.lblLogout.Location = New System.Drawing.Point(388, 151)
+        Me.lblLogout.Name = "lblLogout"
+        Me.lblLogout.Size = New System.Drawing.Size(83, 23)
+        Me.lblLogout.TabIndex = 19
+        Me.lblLogout.Text = "Logout"
+        Me.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label5
+        'lblExit
         '
-        Me.Label5.Location = New System.Drawing.Point(507, 151)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 23)
-        Me.Label5.TabIndex = 20
-        Me.Label5.Text = "Label5"
+        Me.lblExit.Location = New System.Drawing.Point(507, 151)
+        Me.lblExit.Name = "lblExit"
+        Me.lblExit.Size = New System.Drawing.Size(83, 23)
+        Me.lblExit.TabIndex = 20
+        Me.lblExit.Text = "Exit"
+        Me.lblExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(621, 234)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblExit)
+        Me.Controls.Add(Me.lblLogout)
+        Me.Controls.Add(Me.lblInventory)
+        Me.Controls.Add(Me.lblEmployee)
+        Me.Controls.Add(Me.lblCustomer)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogout)
@@ -204,9 +209,9 @@ Partial Class frmMain
     Private WithEvents btnExit As Button
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents lblStatus As ToolStripStatusLabel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblCustomer As Label
+    Friend WithEvents lblEmployee As Label
+    Friend WithEvents lblInventory As Label
+    Friend WithEvents lblLogout As Label
+    Friend WithEvents lblExit As Label
 End Class
