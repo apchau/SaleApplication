@@ -92,6 +92,12 @@
     <Compile Include="frmAddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAddEmployee.Designer.vb">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAddInventory.Designer.vb">
       <DependentUpon>frmAddInventory.vb</DependentUpon>
     </Compile>
@@ -153,6 +159,12 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddInventory.resx">
+      <DependentUpon>frmAddInventory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomer.resx">
       <DependentUpon>frmCustomer.vb</DependentUpon>
