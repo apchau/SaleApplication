@@ -1,4 +1,9 @@
-﻿Public Class frmMain
+﻿Option Strict On
+Option Explicit On
+
+Imports ClassLib
+
+Public Class frmMain
     Private Sub btnStaff_Click(sender As Object, e As EventArgs) Handles btnStaff.Click
         frmEmployee.ShowDialog()
     End Sub
@@ -12,10 +17,15 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        frmLogin.ShowDialog()
+        Close()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Close()
+        Application.Exit()
+    End Sub
+
+    Private Sub frmMain_Load() Handles MyBase.Load
+        Label1.Font = New Font("Times New Roman", 32, FontStyle.Bold)
+        Label1.Text = "Welcome " & frmStart.username & "!"
     End Sub
 End Class

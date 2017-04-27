@@ -22,6 +22,7 @@ Partial Class frmAddInventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddInventory))
         Me.panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -30,21 +31,21 @@ Partial Class frmAddInventory
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.button4 = New System.Windows.Forms.Button()
         Me.button3 = New System.Windows.Forms.Button()
-        Me.lblProductNo = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtContractNo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtStreet = New System.Windows.Forms.TextBox()
         Me.txtLastname = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.errProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel2
@@ -80,19 +81,17 @@ Partial Class frmAddInventory
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtId)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.lblProductNo)
-        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtContractNo)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtStreet)
         Me.GroupBox1.Controls.Add(Me.txtLastname)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 61)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(354, 230)
+        Me.GroupBox1.Size = New System.Drawing.Size(354, 195)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Customer Information"
@@ -101,7 +100,7 @@ Partial Class frmAddInventory
         '
         Me.GroupBox2.Controls.Add(Me.button4)
         Me.GroupBox2.Controls.Add(Me.button3)
-        Me.GroupBox2.Location = New System.Drawing.Point(1, 172)
+        Me.GroupBox2.Location = New System.Drawing.Point(0, 134)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(352, 58)
         Me.GroupBox2.TabIndex = 8
@@ -141,29 +140,10 @@ Partial Class frmAddInventory
         Me.button3.Text = "&Save"
         Me.button3.UseVisualStyleBackColor = False
         '
-        'lblProductNo
-        '
-        Me.lblProductNo.BackColor = System.Drawing.Color.White
-        Me.lblProductNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblProductNo.Location = New System.Drawing.Point(115, 27)
-        Me.lblProductNo.Name = "lblProductNo"
-        Me.lblProductNo.Size = New System.Drawing.Size(45, 22)
-        Me.lblProductNo.TabIndex = 2
-        Me.lblProductNo.Text = " "
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 109)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Description:"
-        '
         'txtContractNo
         '
         Me.txtContractNo.BackColor = System.Drawing.Color.White
-        Me.txtContractNo.Location = New System.Drawing.Point(115, 145)
+        Me.txtContractNo.Location = New System.Drawing.Point(115, 107)
         Me.txtContractNo.Name = "txtContractNo"
         Me.txtContractNo.Size = New System.Drawing.Size(58, 21)
         Me.txtContractNo.TabIndex = 7
@@ -171,19 +151,11 @@ Partial Class frmAddInventory
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 148)
+        Me.Label4.Location = New System.Drawing.Point(15, 110)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 13)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Units in Stock :"
-        '
-        'txtStreet
-        '
-        Me.txtStreet.BackColor = System.Drawing.Color.White
-        Me.txtStreet.Location = New System.Drawing.Point(115, 106)
-        Me.txtStreet.Name = "txtStreet"
-        Me.txtStreet.Size = New System.Drawing.Size(172, 21)
-        Me.txtStreet.TabIndex = 3
         '
         'txtLastname
         '
@@ -214,7 +186,7 @@ Partial Class frmAddInventory
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 300)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 257)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(379, 22)
         Me.StatusStrip1.TabIndex = 17
@@ -225,11 +197,23 @@ Partial Class frmAddInventory
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(0, 17)
         '
+        'txtId
+        '
+        Me.txtId.BackColor = System.Drawing.Color.White
+        Me.txtId.Location = New System.Drawing.Point(115, 25)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(58, 21)
+        Me.txtId.TabIndex = 9
+        '
+        'errProvider
+        '
+        Me.errProvider.ContainerControl = Me
+        '
         'frmAddInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(379, 322)
+        Me.ClientSize = New System.Drawing.Size(379, 279)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.panel2)
         Me.Controls.Add(Me.GroupBox1)
@@ -243,6 +227,7 @@ Partial Class frmAddInventory
         Me.GroupBox2.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -255,14 +240,13 @@ Partial Class frmAddInventory
     Friend WithEvents GroupBox2 As GroupBox
     Private WithEvents button4 As Button
     Private WithEvents button3 As Button
-    Friend WithEvents lblProductNo As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtContractNo As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtStreet As TextBox
     Friend WithEvents txtLastname As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents lblStatus As ToolStripStatusLabel
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents errProvider As ErrorProvider
 End Class

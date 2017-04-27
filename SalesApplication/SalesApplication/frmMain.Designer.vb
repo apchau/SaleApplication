@@ -35,6 +35,7 @@ Partial Class frmMain
         Me.lblInventory = New System.Windows.Forms.Label()
         Me.lblLogout = New System.Windows.Forms.Label()
         Me.lblExit = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -177,11 +178,20 @@ Partial Class frmMain
         Me.lblExit.Text = "Exit"
         Me.lblExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(24, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.TabIndex = 21
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(621, 234)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblExit)
         Me.Controls.Add(Me.lblLogout)
         Me.Controls.Add(Me.lblInventory)
@@ -214,4 +224,5 @@ Partial Class frmMain
     Friend WithEvents lblInventory As Label
     Friend WithEvents lblLogout As Label
     Friend WithEvents lblExit As Label
+    Friend WithEvents Label1 As Label
 End Class
